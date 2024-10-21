@@ -345,7 +345,7 @@ body.disable-scroll {
 .hero-bottom {
     position: absolute;
     bottom: 0px !important;
-    left: 0%;
+    left: -27%;
     transform: translateX(-50%);
     width: 50em !important;
     z-index: 10;
