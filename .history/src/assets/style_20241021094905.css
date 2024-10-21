@@ -321,7 +321,7 @@ body.disable-scroll {
     top: 0px !important;
     left: 0;
     transform: translateX(-50%);
-    width: 100% !important;
+    width: 50em !important;
 }
 .jurai-kanan {
     position: absolute;
