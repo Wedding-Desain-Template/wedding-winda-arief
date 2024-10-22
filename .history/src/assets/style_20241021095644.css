@@ -179,7 +179,7 @@ body.disable-scroll {
     width: 100% !important;
     height: auto;
     min-height: 9%;
-    background-image: url('../assets/vectors/hero-top-cover.png');
+    background-image: url(http://localhost:8080/img/hero-top-cover.dc275724.png);
     background-size: auto 100%;
     background-repeat: repeat-;
     animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
@@ -206,9 +206,9 @@ body.disable-scroll {
 .left-cover {
     position: absolute;
     top: 58px !important;
-    left: -1%;
+    left: 0%;
     bottom: 10px;
-    width: 2.8em !important;
+    width: 2.5em !important;
     height: 100%;
     /* Tambahkan tinggi untuk membuatnya penuh */
     background-image: url('../assets/vectors/left-cover.png');
