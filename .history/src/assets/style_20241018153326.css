@@ -1,0 +1,970 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+@font-face {
+    font-family: 'Baliana';
+    src: url('../assets/fonts/Baliana.otf') format('truetype');
+}
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+body.disable-scroll {
+    overflow: hidden;
+}
+
+.card-cover {
+    position: fixed;
+    /* width: 380px !important; */
+    /* height: 100% !important; */
+    background-image: url('../assets/img/foto-1.jpg');
+    background-size: cover;
+    background-position: top center;
+
+}
+
+.card-cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    /* background-color: rgba(255, 255, 255, 0.756); */
+}
+
+.card-cover>* {
+    position: relative;
+    z-index: 2;
+}
+
+.content-cover {
+    position: relative !important;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(55, 6, 5, 0.83);
+    box-sizing: border-box;
+    justify-content: center !important;
+    box-shadow: 0 4px 8px rgba(46, 48, 90, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: clip-path 1s ease-in-out;
+    clip-path: inset(0% 0% 0% 0%);
+}
+
+#cover.hide {
+    clip-path: inset(100% 0% 0% 0%);
+}
+
+
+
+
+#invitation-content {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+#open-invitation {
+    font-family: 'Alice';
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.3px;
+    margin-top: 30px !important;
+    border-radius: 5px;
+    border: 1.5px solid white;
+    color: white !important;
+    border-radius: 8px !important;
+    font-size: 0.8em !important;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(66, 54, 54, 0.1);
+    /* padding: 20px; */
+    overflow: hidden;
+}
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/img/background.png');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: repeat-y;
+    opacity: 0.5;
+    /* Ubah nilai ini untuk mengatur tingkat opasitas */
+    z-index: 0;
+    /* Pastikan ini berada di belakang konten utama */
+}
+
+.main-container>* {
+    position: relative;
+    /* Agar konten tetap di atas gambar latar belakang */
+    z-index: 1;
+    /* Pastikan konten utama berada di atas */
+}
+
+
+.main-container>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+.card-container {
+    width: 100%;
+    text-align: center;
+}
+
+.card-page {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(55, 6, 5, 0.83);
+    justify-content: center !important;
+    box-shadow: 0 4px 8px rba(46, 48, 90, 0.2);
+}
+
+.card-page-ayat {
+    position: relative;
+    width: 100%;
+    padding: 20px 1px 10px 1px;
+    box-sizing: border-box;
+    padding: 1px !important;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* justify-content: center !important; */
+    box-shadow: 0 4px 8px rgba(46, 48, 90, 0.2);
+}
+
+
+/* Cover */
+
+.hero-top-cover {
+    position: absolute;
+    top: -1px !important;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 47em !important;
+    height: auto;
+    min-height: 9%;
+    background-image: url('../assets/vectors/hero-top-cover.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
+}
+
+.hero-bottom-cover {
+    position: absolute;
+    bottom: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18.9em !important;
+    height: auto;
+    /* Biarkan tinggi otomatis berdasarkan konten */
+    min-height: 9%;
+    /* Menjaga agar tinggi minimal */
+    background-image: url('../assets/vectors/hero-bottom-cover.png');
+    /* Ganti dengan gambar yang diinginkan */
+    background-size: auto 100%;
+    /* Atur lebar gambar otomatis, tinggi penuh */
+    background-repeat: repeat-x;
+    /* Gambar akan berulang hanya secara horizontal */
+    animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
+}
+
+.left-cover {
+    position: absolute;
+    top: 58px !important;
+    left: 0%;
+    bottom: 10px;
+    width: 2.5em !important;
+    height: 100%;
+    /* Tambahkan tinggi untuk membuatnya penuh */
+    background-image: url('../assets/vectors/left-cover.png');
+    /* Ganti dengan gambar yang diinginkan */
+    background-size: contain;
+    /* Atur agar gambar memenuhi elemen */
+    background-repeat: repeat;
+    /* Gambar akan berulang */
+    animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
+}
+
+.right-cover {
+    position: absolute;
+    top: 58px !important;
+    right: 0%;
+    bottom: 10px;
+    width: 2.5em !important;
+    height: 100%;
+    /* Tambahkan tinggi untuk membuatnya penuh */
+    background-image: url('../assets/vectors/right-cover.png');
+    /* Ganti dengan gambar yang diinginkan */
+    background-size: contain;
+    /* Atur agar gambar memenuhi elemen */
+    background-repeat: repeat;
+    /* Gambar akan berulang */
+    animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
+}
+
+.hero-top-cover-1 {
+    position: absolute;
+    top: -1px !important;
+    right: 272px;
+    transform: translateX(-50%);
+    width: 17em !important;
+    animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
+}
+
+.kupu-kupu {
+    width: 7em;
+}
+
+.img-mempelai {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0px 7px 11px 6px rgba(0, 0, 0, 1.7);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: 3;
+}
+
+.cover-text {
+    color: white;
+}
+
+.nickname {
+    font-family: 'Baliana', sans-serif;
+    font-size: 2em;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.card-nama-tamu {
+    border: 1.5px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 80px;
+    width: 230px;
+
+}
+
+.nama-mempelai {
+    font-family: 'Alice';
+    letter-spacing: 1px;
+    font-size: 1em !important;
+    color: white !important;
+}
+
+.nama-mempelai-2 {
+    font-family: 'Alice', sans-serif;
+    letter-spacing: 0px;
+    /* font-weight: bold; */
+    font-size: 1.5em !important;
+    color: #cabc65 !important;
+}
+
+.text-to {
+    font-family: 'Alice', sans-serif;
+    font-size: 0.9em;
+    color: white;
+    letter-spacing: 0.3px;
+}
+.text-to-1 {
+    font-family: 'Alice', sans-serif;
+    font-size: 0.9em;
+    color: #500d0b;
+    letter-spacing: 0.3px;
+}
+.text-to-2 {
+    font-family: 'Baliana', sans-serif;
+    font-size: 1.6em;
+    color: #500d0b;
+    letter-spacing: 0.3px;
+}
+
+
+
+.hero-top {
+    position: absolute;
+    top: 0px !important;
+    right: -51%;
+    transform: translateX(-50%);
+    width: 24em !important;
+}
+
+.jurai-kanan {
+    position: absolute;
+    top: 0px;
+    left: -7%;
+    width: 7em !important;
+}
+
+.jurai-kiri {
+    position: absolute;
+    top: 0px;
+    right: -7%;
+    width: 7em !important;
+}
+
+.burung {
+    width: 5em;
+    margin-top: 42px;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24em !important;
+    z-index: 10;
+}
+
+.art-date-top {
+    position: absolute;
+    bottom: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 21em !important;
+    z-index: 10;
+}
+
+.art-date-bottom {
+    position: absolute;
+    top: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 21em !important;
+    z-index: 10;
+}
+
+
+.flower-top {
+    position: absolute;
+    top: -18px !important;
+    left: 16%;
+    transform: translateX(-50%);
+    width: 10em !important;
+    z-index: 3;
+}
+
+
+
+.flower-right {
+    position: absolute;
+    top: -69px !important;
+    right: -30%;
+    transform: translateX(-50%);
+    width: 11em !important;
+}
+
+.flower-right-1 {
+    position: absolute;
+    top: -15px !important;
+    right: -30%;
+    transform: translateX(-50%);
+    width: 11em !important;
+}
+
+.flower-bottom {
+    position: absolute;
+    bottom: -17px !important;
+    left: 82%;
+    transform: translateX(-50%);
+    width: 13em !important;
+    z-index: 10;
+}
+
+.nama-tamu {
+    font-family: 'Alice', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+.invitation {
+    display: none;
+}
+
+
+/* Page Home */
+.bismillah {
+    width: 35%;
+}
+
+.text-ayat {
+    font-family: 'Alice', sans-serif;
+    font-size: 1em;
+    color: #500d0b !important;
+}
+
+.arti-ayat {
+    font-size: 0.8em;
+    color: #500d0b !important;
+    font-family: 'Alice', sans-serif;
+}
+
+.salam {
+    font-family: 'Alice', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #cabc65;
+    letter-spacing: 0.6px;
+}
+
+.text-home {
+    font-family: 'Alice', sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 20px !important;
+    color: white;
+}
+
+.card-page-home {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.card-page-home.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bride & Groom */
+.bride {
+
+    box-shadow: 0px 7px 11px 6px rgba(0, 0, 0, 1.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+}
+
+.bride:hover {
+    transform: scale(1.03);
+}
+
+.bride img {
+    width: 100%;
+    box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.689);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+
+.cincin {
+    text-align: center;
+    width: 20% !important;
+}
+
+/* Page Date */
+.text-title-2 {
+    color: #500d0b;
+    font-weight: 900;
+    font-family: 'Alice', sans-serif;
+    align-items: center;
+    font-size: 2em;
+    margin-top: 45px;
+    letter-spacing: 0.6px;
+}
+
+.text-title {
+    color: #cabc65;
+    font-family: 'Alice', sans-serif;
+    align-items: center;
+    letter-spacing: 0.6px;
+    font-size: 2em;
+    padding-top: 45px;
+}
+
+.box-date {
+    border: 2px solid #cabc65;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-right: 3px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Alice';
+}
+
+.card-date {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+}
+
+.box-text {
+    color: white;
+    font-size: 0.9em;
+    margin-top: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Alice', sans-serif;
+}
+
+.card-the-date {
+    background-color: rgba(55, 6, 5, 0.83);
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    margin: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.card-rsvp-wish {
+    background-color: #cabc65a3;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.border-card-date {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: #cabc65 2.4px solid;
+    padding: 10px;
+}
+
+.card-the-date-2 {
+    background-color: rgba(55, 6, 5, 0.83);
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    margin: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.border-card-date-2 {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: #cabc65 2.4px solid;
+    padding: 10px;
+}
+
+.title-akad {
+    font-family: 'Baliana', sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: center;
+    color: #cabc65;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.title-rsvp {
+    font-family: 'Baliana', sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.hari-tanggal {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tanggal {
+    text-align: right !important;
+    margin-right: 20px;
+}
+
+.separator {
+    position: absolute;
+    width: 1.4px;
+    height: 30%;
+    margin-top: -10px;
+    background-color: white;
+}
+
+.separator-horizontal {
+    width: 80%;
+    height: 1.5px;
+    background-color: white;
+    margin: 16px auto;
+}
+
+.akad h6 {
+    text-align: center;
+    font-family: 'Alice', sans-serif;
+    font-size: 1.1em !important;
+}
+
+.akad {
+    text-align: left;
+}
+
+.resepsi h6 {
+    text-align: right;
+    font-family: 'Alice', sans-serif;
+    font-size: 0.9em !important;
+}
+
+.resepsi {
+    text-align: right;
+}
+
+.title-resepsi {
+    font-family: 'Alice', sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: right;
+}
+
+
+.open-maps {
+    background-color: #cabc65 !important;
+    color: #500d0b !important;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    border-radius: 50px !important;
+    letter-spacing: 1px;
+}
+.btn-kirim {
+    background-color: white !important;
+    color: #500d0b !important;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    border-radius: 50px !important;
+    letter-spacing: 1px;
+}
+
+.btn-box {
+    text-align: center !important;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+
+.img-mempelai-4 img {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px !important;
+    box-shadow: 8px 7px 5px -2px white;
+}
+
+.card-story {
+    background-color: #cabc65b8;
+    margin: 0px;
+    border-radius: 10px;
+    height: auto;
+    margin: 20px;
+}
+
+.story-box {
+    padding-bottom: 50px;
+}
+
+.title-story {
+    color: white;
+    font-family: 'Baliana', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.title-story-2 {
+    color: white;
+    font-family: 'Baliana', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* Page Galery */
+.galery {
+    column-count: 2;
+    column-gap: 9px;
+    margin-top: 15px;
+}
+
+.img-container {
+    break-inside: avoid;
+    margin-bottom: 5px;
+}
+
+.img-galery {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.5);
+}
+
+/*  modal pop up foto */
+/* .mfp-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.mfp-img {
+    max-width: 100%;
+    height: auto;
+} */
+
+/* RSVP & Wishes */
+.form-control {
+    font-size: 0.9em !important;
+    color: white !important;
+    font-family: 'Alice', sans-serif;
+    height: 45px !important;
+    background-color: #500d0b00 !important;
+    border: 2px solid white !important;
+}
+
+.form-control input {
+    color: white !important;
+}
+
+
+.your-wish {
+    margin-top: 20px;
+    font-size: 0.9em;
+    font-family: 'Alice', sans-serif;
+    color: white;
+    text-align: left;
+    box-shadow: 3px 3px 16px 2px #cabc65ca;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 40vh;
+    overflow: auto;
+}
+
+.your-wish:hover {
+    transform: scale(1.02);
+}
+
+/* Page Gift */
+.btn-gift {
+    background-color: white !important;
+    font-size: 13px !important;
+    font-family: 'Alice', sans-serif !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+/* ATM Card */
+.atm-card {
+    /* background-color: rgba(122, 140, 169, 0.6); */
+    color: #500d0b;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px #500d0b;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+
+.card-title {
+    font-size: 1em;
+    font-family: 'Alice', sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card-details {
+    font-family: 'Alice', sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.card-details p {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.card-details span {
+    font-weight: bold;
+}
+
+.btn-salin {
+    color: white;
+    border: 1px solid #500d0b !important;
+    background-color: #500d0b !important;
+    border: none;
+    /* margin: 5px; */
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 0.7em;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.toast {
+    position: fixed;
+    bottom: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    color: white !important;
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold !important;
+    font-family: 'Alice', sans-serif;
+    border-radius: 8px;
+    opacity: 0;
+    width: 70% !important;
+    transition: opacity 0.5s;
+    z-index: 1000;
+    border: white !important;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* Footer */
+.card-footer {
+    background-color: #500d0b !important;
+    color: white !important;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+    margin-top: -0.1px;
+    box-shadow: 0 4px 8px rgba(46, 48, 90, 0.2);
+
+}
+
+.card-footer i {
+    font-size: 1.4em;
+}
+
+.nama-undangan {
+    font-size: 2em;
+    font-family: 'Alice', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    .main-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .main-container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+/* animasi bergerak */
+@keyframes swing {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(-47%) rotate(3deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    75% {
+        transform: translateX(-53%) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+/* animasi masuk dari kanan ke kiri  */
+@keyframes slideIn {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* animasi masuk dari kiri ke kanan */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
