@@ -9,12 +9,12 @@
           The Wedding Of <br /><span
             class="nama-mempelai mt-5"
             style="font-size: 2.2em !important; color: #cabc65 !important"
-            >Putri & Putra</span
+            >Winda & Arief</span
           >
-          <br />26 Desember 2024
+          <br />15 Desember 2024
         </p>
       </div>
-      <img class="img-mempelai" src="/img/foto-2.jpg" alt="" />
+      <img class="img-mempelai" src="/img/foto-5.jpg" alt="" />
 
       <div class="card-date mt-1 mb-4" id="card-date">
         <div>
@@ -112,19 +112,18 @@
         data-aos-delay="500"
         data-aos-duration="1500"
       >
-      <a :href="isProduction ? '/wedding-winda-arief/img/foto-4.jpg' : '/img/foto-4.jpg'">
-    <img :src="isProduction ? '/wedding-winda-arief/img/foto-4.jpg' : '/img/foto-4.jpg'" alt="Foto 4" />
-</a>
-
+        <a href="/img/foto-8.jpg" class="image-popup" title="Picture"
+          ><img src="/img/foto-8.jpg" alt=""
+        /></a>
       </div>
-      <h3 class="nickname mt-3">Putri</h3>
+      <h3 class="nickname mt-3">Winda</h3>
 
       <h2
         class="nama-mempelai-2 mb-2 mt-2"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
-        Nama Mempelai Wanita
+        {{ namaMemepelaiWanita }}
       </h2>
       <h6
         class="text-to mb-5"
@@ -132,7 +131,8 @@
         data-aos-delay="300"
         data-aos-duration="1500"
       >
-        Putri dari Bapak Puteri & <br />Ibu Putri
+        Putri dari Bapak {{ ayahMempelaiWanita }} & <br />Ibu
+        {{ ibuMempelaiWanita }}
       </h6>
       <img
         data-aos="zoom-in"
@@ -142,14 +142,14 @@
         src="../assets/vectors/cincin.png"
         alt=""
       />
-      <h2 class="nickname" style="margin-top: 20px !important">Putra</h2>
+      <h2 class="nickname" style="margin-top: 20px !important">Arief</h2>
       <h2
         class="nama-mempelai-2 mt-2 mb-2"
         data-aos="fade-up"
         data-aos-delay="300"
         data-aos-duration="1500"
       >
-        Nama Mempelai Pria
+        {{ namaMemepelaiPria }}
       </h2>
 
       <h6
@@ -158,7 +158,8 @@
         data-aos-delay="300"
         data-aos-duration="1500"
       >
-        Putra dari Bapak Putra & <br />Ibu Putra
+        Putra dari Bapak {{ ayahMempelaiPria }} & <br />Ibu
+        {{ ibuMempelaiPria }}
       </h6>
       <div
         class="bride m-4"
@@ -221,25 +222,28 @@
               text-transform: uppercase;
             "
           >
-            SAbTU
+            {{ hariAkad }}
           </h6>
           <div class="separator-horizontal"></div>
 
           <div class="hari-tanggal">
             <h6 class="tanggal">
-              <span style="font-size: 2em">28</span> <br />Desember <br />2024
+              <span style="font-size: 2em">{{ tglAkad }}</span> <br />{{
+                bulanAkad
+              }}
+              <br />{{ tahunAkad }}
             </h6>
             <div class="separator"></div>
             <h6 class="jam">
-              08:00 WIB <br />
+              {{ jamMulaiAkad }} WIB <br />
               s.d <br />
-              10:00 WIB
+              {{ jamSelesaiAkad }}
             </h6>
           </div>
 
           <div class="separator-horizontal"></div>
-          <h6 style="font-size: 0.8em !important">
-            Rumah Mempelai Pria Jl. Raya Kuranji No. 45 Korong Gadang
+          <h6 style="font-size: 1.2em !important">
+            {{ lokasiAkad }}
           </h6>
           <div class="btn-box">
             <button class="btn open-maps">
@@ -284,25 +288,28 @@
               text-transform: uppercase;
             "
           >
-            SAbTU
+            {{ hariResepsi }}
           </h6>
           <div class="separator-horizontal"></div>
 
           <div class="hari-tanggal">
             <h6 class="tanggal">
-              <span style="font-size: 2em">28</span> <br />Desember <br />2024
+              <span style="font-size: 2em">{{ tglResepsi }}</span> <br />{{
+                bulanResepsi
+              }}
+              <br />{{ tahunResepsi }}
             </h6>
             <div class="separator"></div>
             <h6 class="jam">
-              08:00 WIB <br />
+              {{ jamMulaiResepsi }} WIB <br />
               s.d <br />
-              10:00 WIB
+              {{ jamSelesaiResepsi }}
             </h6>
           </div>
 
           <div class="separator-horizontal"></div>
-          <h6 style="font-size: 0.8em !important">
-            Rumah Mempelai Pria Jl. Raya Kuranji No. 45 Korong Gadang
+          <h6 style="font-size: 1.2em !important">
+            {{ lokasiResepsi }}
           </h6>
           <div class="btn-box">
             <button class="btn open-maps">
@@ -314,74 +321,18 @@
     </div>
   </div>
   <!-- End Date -->
-
   <!-- Story -->
   <div class="card-page p-2" data-aos="zoom-in" data-aos-duration="1500">
     <img class="hero-top" src="../assets/vectors/hero-top.png" alt="" />
-    <img class="flower-top" src="../assets/vectors/flower-top.png" alt="" />
-
-    <div class="story-box">
-      <div
-        class="title-box mb-3"
-        data-aos="zoom-in"
-        data-aos-delay="100"
-        data-aos-duration="1500"
-      >
-        <p class="text-title">Story of Us</p>
-      </div>
-
-      <div
-        class="card-story p-2 mb-3"
-        data-aos="fade-right"
-        data-aos-delay="300"
-        data-aos-duration="1500"
-      >
-        <h1 class="title-story">
-          <i class="fa fa-heart me-2" style="font-size: 19px"></i>Pertemuan
-          Pertama
-        </h1>
-        <hr style="color: aliceblue" />
-        <p class="text-to" style="color: white !important; text-align: justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio et ut qui omnis, neque culpa ab magnam id cumque minus
-          accusamus laudantium magni. Quibusdam alias dolores expedita impedit
-          autem.
-        </p>
-      </div>
-      <div
-        class="card-story p-2 mb-3"
-        data-aos="fade-right"
-        data-aos-delay="300"
-        data-aos-duration="1500"
-      >
-        <h1 class="title-story-2">
-          Komitmen<i class="fa fa-heart mx-2" style="font-size: 19px"></i>
-        </h1>
-        <hr style="color: aliceblue" />
-        <p class="text-to" style="color: white !important; text-align: justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio et ut qui omnis, neque culpa ab magnam id cumque minus
-          accusamus laudantium magni. Quibusdam alias dolores expedita impedit
-          autem.
-        </p>
-      </div>
-      <div
-        class="card-story p-2"
-        data-aos="fade-right"
-        data-aos-delay="300"
-        data-aos-duration="1500"
-      >
-        <h1 class="title-story">
-          <i class="fa fa-heart me-2" style="font-size: 17px"></i>Tunangan
-        </h1>
-        <hr style="color: aliceblue" />
-        <p class="text-to" style="color: white !important; text-align: justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio et ut qui omnis, neque culpa ab magnam id cumque minus
-          accusamus laudantium magni. Quibusdam alias dolores expedita impedit
-          autem.
-        </p>
-      </div>
+    <div
+      class="story m-4"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+      data-aos-duration="1500"
+    >
+      <a href="/img/foto-1.jpg" class="image-popup" title="Foto 2">
+        <img class="img-galery" src="/img/foto-1.jpg" alt="Foto 2" />
+      </a>
     </div>
     <img class="hero-bottom" src="../assets/vectors/hero-bottom.png" alt="" />
   </div>
@@ -400,17 +351,18 @@
       data-aos-delay="200"
       data-aos-duration="1500"
     >
-      <p class="text-title-2">Our Moments</p>
+      <p class="text-title-2">Our Galery</p>
     </div>
     <div class="galery px-3 pt-2 pb-3">
+     
       <div
         class="img-container"
         data-aos="zoom-in"
         data-aos-delay="200"
         data-aos-duration="1500"
       >
-        <a href="/img/foto-2.jpg" class="image-popup" title="Foto 2">
-          <img class="img-galery" src="/img/foto-2.jpg" alt="Foto 2" />
+        <a href="/img/foto-6.jpg" class="image-popup" title="Foto 7">
+          <img class="img-galery" src="/img/foto-6.jpg" alt="Foto 7" />
         </a>
       </div>
       <div
@@ -419,18 +371,8 @@
         data-aos-delay="200"
         data-aos-duration="1500"
       >
-        <a href="/img/foto-7.jpg" class="image-popup" title="Foto 7">
-          <img class="img-galery" src="/img/foto-7.jpg" alt="Foto 7" />
-        </a>
-      </div>
-      <div
-        class="img-container"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-        data-aos-duration="1500"
-      >
-        <a href="/img/foto-1.jpg" class="image-popup" title="Foto 1">
-          <img class="img-galery" src="/img/foto-1.jpg" alt="Foto 1" />
+        <a href="/img/foto-11.jpg" class="image-popup" title="Foto 1">
+          <img class="img-galery" src="/img/foto-11.jpg" alt="Foto 1" />
         </a>
       </div>
       <div
@@ -449,8 +391,8 @@
         data-aos-delay="200"
         data-aos-duration="1500"
       >
-        <a href="/img/foto-4.jpg" class="image-popup" title="Foto 4">
-          <img class="img-galery" src="/img/foto-4.jpg" alt="Foto 4" />
+        <a href="/img/foto-10.jpg" class="image-popup" title="Foto 4">
+          <img class="img-galery" src="/img/foto-10.jpg" alt="Foto 4" />
         </a>
       </div>
       <div
@@ -460,20 +402,86 @@
         data-aos-duration="1500"
       >
         <a href="/img/foto-2.jpg" class="image-popup" title="Foto 5">
-          <img class="img-galery" src="/img/foto-2.jpg" alt="Foto 5" />
+          <img class="img-galery" src="/img/foto-12.jpg" alt="Foto 5" />
+        </a>
+      </div>
+      <div
+        class="img-container"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        data-aos-duration="1500"
+      >
+        <a href="/img/foto-2.jpg" class="image-popup" title="Foto 2">
+          <img class="img-galery" src="/img/foto-2.jpg" alt="Foto 2" />
         </a>
       </div>
     </div>
   </div>
   <!-- End Galery -->
 
+  <!-- RSVP dan Wish -->
+  <div class="card-page" data-aos="zoom-in" data-aos-duration="1500">
+    <img class="hero-top" src="../assets/vectors/hero-top.png" alt="" />
+    <img class="flower-top" src="../assets/vectors/flower-top.png" alt="" />
+
+    <div class="px-4" style="padding-bottom: 60px">
+      <div
+        class="card-rsvp-wish mt-0 p-2"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        data-aos-delay="100"
+      >
+        <div class="akad px-3 mt-5 mb-1">
+          <h1 class="title-rsvp">Konfirmasi Kehadiran</h1>
+          <form action="">
+            <div class="form-group mt-1">
+              <input
+                class="form-control"
+                type="text"
+                id="nama_tamu"
+                name="nama_tamu"
+                placeholder="nama kamu"
+                required
+              />
+            </div>
+            <div
+              class="form-group mt-3 mx-2"
+              style="font-family: 'Alice', sans-serif; font-size: 1em"
+            >
+              <label class="mb-2">Apakah Anda Akan Bisa Menghadiri?</label>
+              <br />
+              <label class="me-3">
+                <input type="radio" name="attendance" value="yes" required />
+                InsyaAllah
+              </label>
+              <label class="me-3">
+                <input type="radio" name="attendance" value="no" required />
+                Masih Ragu
+              </label>
+              <label>
+                <input type="radio" name="attendance" value="no" required />
+                Tidak Bisa
+              </label>
+            </div>
+
+            <div class="form-group d-flex justify-content-end">
+              <button class="btn btn-kirim mt-4">
+                <i class="fa fa-heart me-2"></i>Kirim
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <img class="hero-bottom" src="../assets/vectors/hero-bottom.png" alt="" />
+  </div>
+  <!-- End RSVP dan Wish -->
+
   <!-- Gift -->
   <div class="card-page-ayat p-3" data-aos="zoom-in" data-aos-duration="1500">
-    <img
-      src="../assets/vectors/flower-right.png"
-      class="flower-right-1"
-      alt=""
-    />
+    <img class="flower-top" src="../assets/vectors/flower-top.png" alt="" />
+
     <div
       class="title-box"
       data-aos="zoom-in"
@@ -514,16 +522,92 @@
           data-aos-duration="1500"
         >
           <div class="card-title">
-            <b><i class="fa fa-credit-card me-2"></i>ATM BNI</b>
+            <b
+              ><i class="fa fa-credit-card me-2"></i>ATM {{ jenisRekening1 }}</b
+            >
           </div>
           <div class="card-details">
-            <p><span id="account-number">{{ rekening }}</span></p>
+            <p>
+              <span id="account-number">{{ rekening }}</span>
+            </p>
             <b>a.n {{ pemilikRekening }}</b>
           </div>
           <div class="form-group d-flex justify-content-end mt-4">
             <button class="btn-salin" id="copy-rekening" @click="copyRekening">
               <i class="fa fa-copy me-2"></i>
               {{ isCopiedRekening ? "Rekening Disalin" : "Salin Rekening" }}
+            </button>
+          </div>
+        </div>
+        <div
+          class="atm-card mt-3"
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="1500"
+        >
+          <div class="card-title">
+            <b
+              ><i class="fa fa-credit-card me-2"></i>ATM {{ jenisRekening2 }}</b
+            >
+          </div>
+          <div class="card-details">
+            <p>
+              <span id="account-number">{{ rekening2 }}</span>
+            </p>
+            <b>a.n {{ pemilikRekening }}</b>
+          </div>
+          <div class="form-group d-flex justify-content-end mt-4">
+            <button
+              class="btn-salin"
+              id="copy-rekening2"
+              @click="copyRekening2"
+            >
+              <i class="fa fa-copy me-2"></i>
+              {{ isCopiedRekening2 ? "Rekening Disalin" : "Salin Rekening" }}
+            </button>
+          </div>
+        </div>
+        <div
+          class="atm-card mt-3"
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="1500"
+        >
+          <div class="card-title">
+            <b><i class="fa fa-credit-card me-2"></i>No DANA</b>
+          </div>
+          <div class="card-details">
+            <p>
+              <span id="account-number">{{ nodana1 }}</span>
+            </p>
+            <b>a.n {{ pemilikRekening }}</b>
+          </div>
+          <div class="form-group d-flex justify-content-end mt-4">
+            <button class="btn-salin" id="copy-dana1" @click="copyDana1">
+              <i class="fa fa-copy me-2"></i>
+              {{ isCopiedDana1 ? "No.Dana Disalin" : "Salin No.Dana" }}
+            </button>
+          </div>
+        </div>
+        <div
+          class="atm-card mt-3"
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="1500"
+        >
+          <div class="card-title">
+            <b><i class="fa fa-credit-card me-2"></i>No DANA</b>
+          </div>
+          <div class="card-details">
+            <p>
+              <span id="account-number">{{ nodana2 }}</span>
+            </p>
+            <b>a.n {{ pemilikRekening2 }}</b>
+          </div>
+          <div class="form-group d-flex justify-content-end mt-4">
+            <button class="btn-salin" id="copy-dana2" @click="copyDana2">
+              <i class="fa fa-copy me-2"></i>
+              {{ isCopiedDana2 ? "No.Dana Disalin" : "Salin No.Dana" }}
             </button>
           </div>
         </div>
@@ -550,13 +634,13 @@
             <b>{{ pemilikHadiah }}</b>
             <p>
               <span id="account-number" style="font-size: 0.9em !important"
-                >No HP : {{nohp}}</span
+                >No HP : {{ nohp }}</span
               >
             </p>
             <p>
-              <span id="address" style="font-size: 0.9em !important"
-                >{{alamat}}</span
-              >
+              <span id="address" style="font-size: 0.9em !important">{{
+                alamatPenerimaHadiah
+              }}</span>
             </p>
           </div>
           <div class="form-group d-flex justify-content-end mt-4">
@@ -589,8 +673,7 @@
       data-aos-duration="1500"
     >
       Menjadi sebuah kebahagiaan dan suatu hal berhaga bagi kami apabila
-      Bapak\Ibu Saudara\i bisa hadir dalam hari bahagia kami. Terima kasih untuk
-      semua doa baik untuk kami.
+      Bapak\Ibu Saudara\i bisa hadir dalam hari bahagia kami.
     </p>
     <div class="d-flex" style="gap: 18px">
       <div
@@ -599,8 +682,8 @@
         data-aos-delay="300"
         data-aos-duration="2000"
       >
-        <a href="/assets/img/foto-2.jpg" class="image-popup" title="Foto 3"
-          ><img src="/img/foto-3.jpg" alt=""
+        <a href="/assets/img/foto-9.jpg" class="image-popup" title="Foto 3"
+          ><img src="/img/foto-9.jpg" alt=""
         /></a>
       </div>
     </div>
@@ -620,7 +703,7 @@
       data-aos-delay="200"
       data-aos-duration="1500"
     >
-      Putri & Putra
+      Winda & Arief
     </h5>
   </div>
   <!-- End ThankYou -->
@@ -655,14 +738,43 @@ export default {
         detik: 0,
       },
       interval: null,
-      isModalOpen: false, 
+      isModalOpen: false,
       isCopiedRekening: false,
+      isCopiedRekening2: false,
       isCopiedAlamat: false,
-      rekening: "123-456-7890",
-      pemilikRekening: "Winda ",
+      rekening: "5469 0104 0096 539",
+      rekening2: "1110 0227 8113 8",
+      nodana1: " 082287607605",
+      nodana2: " 081372096664",
+      pemilikRekening: "Winda Amelia",
+      pemilikRekening2: "Arief Gustian Putra",
+      jenisRekening1: "BRI",
+      jenisRekening2: "MANDIRI",
       alamat: "Jalan",
-      pemilikHadiah: "Winda",
-      nohp: "09090909"
+      pemilikHadiah: "Winda Amelia",
+      nohp: "+62 821-7275-8465",
+      alamatPenerimaHadiah:
+        "Wisma indah VI Blok G No.20 Balai Baru, Padang, Sumbar",
+      namaMemepelaiWanita: "Winda Amelia",
+      namaMemepelaiPria: "Arief Gustian Putra",
+      ayahMempelaiWanita: "Alius Bakar",
+      ayahMempelaiPria: "Yoserizal",
+      ibuMempelaiWanita: "Zurmaini",
+      ibuMempelaiPria: "Irdawati (Almh)",
+      hariAkad: "Minggu",
+      tglAkad: "15",
+      bulanAkad: "Desember",
+      tahunAkad: "2024",
+      jamMulaiAkad: "08:00",
+      jamSelesaiAkad: "Selesai",
+      lokasiAkad: "Gedung Taruko Convention Center",
+      hariResepsi: "Minggu",
+      tglResepsi: "15",
+      bulanResepsi: "Desember",
+      tahunResepsi: "2024",
+      jamMulaiResepsi: "08:00",
+      jamSelesaiResepsi: "Selesai",
+      lokasiResepsi: "Gedung Taruko Convention Center",
     };
   },
   methods: {
@@ -713,6 +825,69 @@ export default {
       // Reset status salinan setelah 2 detik
       setTimeout(() => {
         this.isCopiedRekening = false;
+      }, 2000);
+    },
+    copyRekening2() {
+      const copyButton = document.getElementById("copy-rekening2"); // Pastikan tombol ada
+      if (!copyButton) {
+        console.error("Copy button not found");
+        return;
+      }
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = this.rekening2; // Ganti dengan rekening yang sesuai
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Mengubah status salinan berhasil
+      this.isCopiedRekening2 = true;
+
+      // Reset status salinan setelah 2 detik
+      setTimeout(() => {
+        this.isCopiedRekening2 = false;
+      }, 2000);
+    },
+    copyDana2() {
+      const copyButton = document.getElementById("copy-dana2"); // Pastikan tombol ada
+      if (!copyButton) {
+        console.error("Copy button not found");
+        return;
+      }
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = this.nodana2; // Ganti dengan rekening yang sesuai
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Mengubah status salinan berhasil
+      this.isCopiedDana2 = true;
+
+      // Reset status salinan setelah 2 detik
+      setTimeout(() => {
+        this.isCopiedDana2 = false;
+      }, 2000);
+    },
+    copyDana1() {
+      const copyButton = document.getElementById("copy-dana1"); // Pastikan tombol ada
+      if (!copyButton) {
+        console.error("Copy button not found");
+        return;
+      }
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = this.nodana1; // Ganti dengan rekening yang sesuai
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // Mengubah status salinan berhasil
+      this.isCopiedDana1 = true;
+
+      // Reset status salinan setelah 2 detik
+      setTimeout(() => {
+        this.isCopiedDana1 = false;
       }, 2000);
     },
     copyAlamat() {

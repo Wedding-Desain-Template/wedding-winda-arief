@@ -30,7 +30,7 @@
           data-aos-duration="2500"
           data-aos-delay="300"
         >
-          Putri & Putra
+          Winda & Arief
         </h2>
         <div class="card-nama-tamu" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">
           <h6

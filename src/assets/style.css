@@ -468,7 +468,7 @@ body.disable-scroll {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
-
+ 
 }
 
 .bride:hover {
@@ -480,6 +480,13 @@ body.disable-scroll {
     box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.689);
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+}
+.story img {
+    width: 100%;
+    padding: 10px;
+    /* box-shadow: 2px 3px 6px 1px rgba(0, 0, 0, 0.689); */
+    /* border-top-left-radius: 50%; */
+    /* border-top-right-radius: 50%; */
 }
 
 
@@ -559,12 +566,16 @@ body.disable-scroll {
     border-top-right-radius: 50%;
 }
 .card-rsvp-wish {
-    background-color: #cabc65a3;
-    color: white;
+    /* background-color: #cabc65a3; */
+    color: white !important;
     margin-top: 10px;
     padding: 10px;
     margin: 20px;
     border-radius: 15px;
+}
+
+input::placeholder {
+    color: white !important; /* Warna placeholder */
 }
 
 .border-card-date {
@@ -825,7 +836,7 @@ body.disable-scroll {
     font-family: 'Alice', sans-serif;
     margin-bottom: 15px;
     text-align: left;
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
 .card-details p {
