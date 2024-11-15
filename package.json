@@ -1,10 +1,10 @@
 {
-  "name": "blossom-blue",
+  "name": "adat-minang",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && mv dist dist/wedding-winda-arief",
     "lint": "vue-cli-service lint",
     "deploy": "gh-pages -d dist"
   },

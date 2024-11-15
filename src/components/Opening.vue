@@ -112,9 +112,10 @@
         data-aos-delay="500"
         data-aos-duration="1500"
       >
-        <a href="/img/foto-8.jpg" class="image-popup" title="Picture"
-          ><img src="/img/foto-8.jpg" alt=""
-        /></a>
+      <a :href="isProduction ? '/wedding-winda-arief/img/foto-4.jpg' : '/img/foto-4.jpg'">
+    <img :src="isProduction ? '/wedding-winda-arief/img/foto-4.jpg' : '/img/foto-4.jpg'" alt="Foto 4" />
+</a>
+
       </div>
       <h3 class="nickname mt-3">Putri</h3>
 
