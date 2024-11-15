@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Baliana';
-    src: url('../assets/fonts/Baliana.otf') format('truetype');
+    src: url('/fonts/Baliana.otf') format('truetype');
 }
 
 
@@ -24,7 +24,7 @@ body.disable-scroll {
     position: fixed;
     width: 100% !important;
     height: 100% !important;
-    background-image: url('/public/img/foto-1.jpg');
+    background-image: url('/img/foto-1.jpg');
     background-size: cover;
     background-position: top center;
 
@@ -118,7 +118,7 @@ body.disable-scroll {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../assets/vectors/background.png');
+    background-image: url('/vectors/background.png');
     background-size: contain;
     background-position: top center;
     background-repeat: repeat-y;
@@ -179,7 +179,7 @@ body.disable-scroll {
     width: 100% !important;
     height: auto;
     min-height: 9%;
-    background-image: url('../assets/vectors/hero-top-cover.png');
+    background-image: url('/vectors/hero-top-cover.png');
     background-size: auto 100%;
     background-repeat: repeat-;
     animation: slideInFromLeft 2s ease-out swing 5s infinite ease-in-out 2s;
@@ -194,7 +194,7 @@ body.disable-scroll {
     /* Biarkan tinggi otomatis berdasarkan konten */
     min-height: 9%;
     /* Menjaga agar tinggi minimal */
-    background-image: url('../assets/vectors/hero-bottom-cover.png');
+    background-image: url('/vectors/hero-bottom-cover.png');
     /* Ganti dengan gambar yang diinginkan */
     background-size: auto 100%;
     /* Atur lebar gambar otomatis, tinggi penuh */
@@ -211,7 +211,7 @@ body.disable-scroll {
     width: 2.8em !important;
     height: 100%;
     /* Tambahkan tinggi untuk membuatnya penuh */
-    background-image: url('../assets/vectors/left-cover.png');
+    background-image: url('/vectors/left-cover.png');
     /* Ganti dengan gambar yang diinginkan */
     background-size: contain;
     /* Atur agar gambar memenuhi elemen */
@@ -228,7 +228,7 @@ body.disable-scroll {
     width: 2.8em !important;
     height: 100%;
     /* Tambahkan tinggi untuk membuatnya penuh */
-    background-image: url('../assets/vectors/right-cover.png');
+    background-image: url('/vectors/right-cover.png');
     /* Ganti dengan gambar yang diinginkan */
     background-size: contain;
     /* Atur agar gambar memenuhi elemen */

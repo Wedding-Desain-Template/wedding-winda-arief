@@ -24,7 +24,7 @@ body.disable-scroll {
     position: fixed;
     width: 100% !important;
     height: 100% !important;
-    background-image: url('/public/img/foto-1.jpg');
+    background-image: url('../img/foto-1.jpg');
     background-size: cover;
     background-position: top center;
 
