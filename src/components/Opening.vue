@@ -2,8 +2,8 @@
   <!-- Opening -->
   <div id="invitation-content" class="invitation">
     <div class="card-page p-5" id="page-home">
-      <img class="hero-top" src="/vectors/hero-top.png" alt="" />
-      <img class="flower-top" src="/vectors/flower-top.png" alt="" />
+      <img class="hero-top" src="../assets/vectors/hero-top.png" alt="" />
+      <img class="flower-top" src="../assets/vectors/flower-top.png" alt="" />
       <div id="text-opening">
         <p class="text-to">
           The Wedding Of <br /><span
@@ -35,10 +35,10 @@
         </div>
       </div>
 
-      <img class="hero-bottom" src="/vectors/hero-bottom.png" alt="" />
+      <img class="hero-bottom" src="../assets/vectors/hero-bottom.png" alt="" />
       <img
         class="flower-bottom"
-        src="/vectors/flower-bottom.png"
+        src="../assets/vectors/flower-bottom.png"
         alt=""
       />
     </div>
@@ -49,7 +49,7 @@
   <div class="card-page-ayat p-3" data-aos="zoom-in" data-aos-duration="800">
     <img
       class="bismillah mt-4 mb-1"
-      src="/vectors/bismillah.png"
+      src="../assets/vectors/bismillah.png"
       alt=""
       data-aos="fade-up"
       data-aos-duration="2000"
@@ -83,10 +83,10 @@
 
   <!-- Pengantin -->
   <div class="card-page p-3" data-aos="zoom-in" data-aos-duration="1500">
-    <img class="hero-top" src="/vectors/hero-top.png" alt="" />
-    <img class="jurai-kiri" src="/vectors/jurai-kiri.png" alt="" />
-    <img class="jurai-kanan" src="/vectors/jurai-kanan.png" alt="" />
-    <img class="burung" src="/vectors/burung.png" alt="" />
+    <img class="hero-top" src="../assets/vectors/hero-top.png" alt="" />
+    <img class="jurai-kiri" src="../assets/vectors/jurai-kiri.png" alt="" />
+    <img class="jurai-kanan" src="../assets/vectors/jurai-kanan.png" alt="" />
+    <img class="burung" src="../assets/vectors/burung.png" alt="" />
 
     <div class="mb-5">
       <p
@@ -112,8 +112,8 @@
         data-aos-delay="500"
         data-aos-duration="1500"
       >
-        <a href="/assets/img/foto-6.jpg" class="image-popup" title="Picture"
-          ><img src="/img/foto-6.jpg" alt=""
+        <a href="/img/foto-8.jpg" class="image-popup" title="Picture"
+          ><img src="/img/foto-8.jpg" alt=""
         /></a>
       </div>
       <h3 class="nickname mt-3">Putri</h3>
@@ -138,7 +138,7 @@
         data-aos-delay="400"
         data-aos-duration="1500"
         class="cincin mt-2 mb-4"
-        src="/vectors/cincin.png"
+        src="../assets/vectors/cincin.png"
         alt=""
       />
       <h2 class="nickname" style="margin-top: 20px !important">Putra</h2>
@@ -165,18 +165,18 @@
         data-aos-delay="300"
         data-aos-duration="1500"
       >
-        <a href="/assets/img/foto-5.jpg" class="image-popup" title="Picture"
-          ><img src="/img/foto-5.jpg" alt=""
+        <a href="/img/foto-4.jpg" class="image-popup" title="Picture"
+          ><img src="/img/foto-4.jpg" alt=""
         /></a>
       </div>
     </div>
-    <img class="hero-bottom" src="/vectors/hero-bottom.png" alt="" />
+    <img class="hero-bottom" src="../assets/vectors/hero-bottom.png" alt="" />
   </div>
   <!-- End Pengantin -->
 
   <!-- Date -->
   <div class="card-page-ayat p-3" data-aos="zoom-in" data-aos-duration="1500">
-    <img class="flower-top" src="/vectors/flower-top.png" alt="" />
+    <img class="flower-top" src="../assets/vectors/flower-top.png" alt="" />
     <div
       class="title-box"
       data-aos="zoom-in"
@@ -193,7 +193,7 @@
       </p>
       <img
         class="flower-right"
-        src="/vectors/flower-right.png"
+        src="../assets/vectors/flower-right.png"
         alt=""
       />
     </div>
@@ -248,7 +248,7 @@
         </div>
         <img
           class="art-date-top"
-          src="/vectors/art-date-top.png"
+          src="../assets/vectors/art-date-top.png"
           alt=""
         />
       </div>
@@ -263,7 +263,7 @@
       <div class="border-card-date-2">
         <img
           class="art-date-bottom"
-          src="/vectors/art-date-bottom.png"
+          src="../assets/vectors/art-date-bottom.png"
           alt=""
         />
 
@@ -316,8 +316,8 @@
 
   <!-- Story -->
   <div class="card-page p-2" data-aos="zoom-in" data-aos-duration="1500">
-    <img class="hero-top" src="/vectors/hero-top.png" alt="" />
-    <img class="flower-top" src="/vectors/flower-top.png" alt="" />
+    <img class="hero-top" src="../assets/vectors/hero-top.png" alt="" />
+    <img class="flower-top" src="../assets/vectors/flower-top.png" alt="" />
 
     <div class="story-box">
       <div
@@ -382,14 +382,14 @@
         </p>
       </div>
     </div>
-    <img class="hero-bottom" src="/vectors/hero-bottom.png" alt="" />
+    <img class="hero-bottom" src="../assets/vectors/hero-bottom.png" alt="" />
   </div>
   <!-- End Story -->
 
   <!-- Galery -->
   <div class="card-page-ayat p-3" data-aos="zoom-in" data-aos-duration="1500">
     <img
-      src="/vectors/flower-right.png"
+      src="../assets/vectors/flower-right.png"
       class="flower-right-1"
       alt=""
     />
@@ -469,7 +469,7 @@
   <!-- Gift -->
   <div class="card-page-ayat p-3" data-aos="zoom-in" data-aos-duration="1500">
     <img
-      src="/vectors/flower-right.png"
+      src="../assets/vectors/flower-right.png"
       class="flower-right-1"
       alt=""
     />

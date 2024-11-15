@@ -12,7 +12,7 @@
           class="kupu-kupu"
           data-aos="fade-left"
           data-aos-duration="2500"
-          src="/vectors/kupu-kupu.png"
+          src="../assets/vectors/kupu-kupu.png"
           alt=""
         />
         <p
