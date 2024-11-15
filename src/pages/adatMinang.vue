@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import CoverInvitation from "./components/Cover.vue";
-import OpeningInvitation from "./components/Opening.vue";
+import CoverInvitation from "../components/Cover.vue";
+import OpeningInvitation from "../components/Opening.vue";
 
 export default {
   name: "App",

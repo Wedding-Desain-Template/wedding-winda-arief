@@ -1,21 +1,15 @@
 <template>
-    <div class="main-container">
-      <div class="card-container">
-        <CoverInvitation />
-        <OpeningInvitation />
-      </div>
-    </div>
+  <div id="app">
+    <router-view /> <!-- Ini yang akan menampilkan komponen sesuai dengan rute -->
+  </div>
 </template>
 
 <script>
-import CoverInvitation from "./components/Cover.vue";
-import OpeningInvitation from "./components/Opening.vue";
-
 export default {
-  name: "App",
-  components: {
-    CoverInvitation,
-    OpeningInvitation,
-  },
+  name: 'App',
 };
 </script>
+
+<style>
+/* Gaya global untuk aplikasi */
+</style>
